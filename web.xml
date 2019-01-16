@@ -1,0 +1,33 @@
+<web-app xmlns="http://java.sun.com/xml/ns/javaee" 
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
+http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+         version="3.0" metadata-complete="true">
+    <servlet>
+        <servlet-name>MyServ</servlet-name>
+        <servlet-class>com.MyServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>MyServ</servlet-name>
+        <url-pattern>/MyServ</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>Form</servlet-name>
+        <servlet-class>com.Form</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Form</servlet-name>
+        <url-pattern>/Form</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>Exception</servlet-name>
+        <servlet-class>com.Exception</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Exception</servlet-name>
+        <url-pattern>/Exception</url-pattern>
+    </servlet-mapping>
+    
+</web-app>
