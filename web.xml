@@ -29,5 +29,14 @@ http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
         <servlet-name>Exception</servlet-name>
         <url-pattern>/Exception</url-pattern>
     </servlet-mapping>
+
+    <servlet>
+        <servlet-name>Task12</servlet-name>
+        <servlet-class>com.Task12</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Task12</servlet-name>
+        <url-pattern>/Task12</url-pattern>
+    </servlet-mapping>
     
 </web-app>
