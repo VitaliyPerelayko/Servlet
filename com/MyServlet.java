@@ -88,12 +88,12 @@ public class MyServlet extends HttpServlet {
             // Выводим информацию на странице
             out.println("<html><head><title>MyServ</title></head>");
             out.println("<body><h1>Hello " + name + ", You use the "+browser+"</h1>");
-            out.println("<body><h1>You are " + countOfUsers + "th visitor</h1>");
+            out.println("<h1>You are " + countOfUsers + "th visitor</h1>");
             if (eMail!=null) {
-                out.println("<body><h1>E-mail " + eMail + "</h1>");
+                out.println("<h1>E-mail " + eMail + "</h1>");
             }
             if (phone!=null) {
-                out.println("<body><h1>Phone " + phone + "</h1>");
+                out.println("<h1>Phone " + phone + "</h1>");
             }
             out.println("</body></html>");
         }
