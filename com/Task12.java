@@ -1,7 +1,6 @@
 package com;
 
 import javax.imageio.ImageIO;
-import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -44,17 +43,11 @@ public class Task12 extends HttpServlet {
     protected void doGet(HttpServletRequest request,
                          HttpServletResponse response) throws ServletException, IOException {
 
-        response.setContentType("image/jpeg");
-        // увеличиваем счётчик пользователей (Задание 9)
+        // увеличиваем счётчик пользователей
         countOfUsers++;
 
-        BufferedImage image = new  BufferedImage(800,200,BufferedImage.TYPE_INT_RGB);
-        Graphics2D graphics = image.createGraphics();
-        graphics.setFont(new Font("Monospaced",Font.ITALIC,48));
-        graphics.setColor(Color.YELLOW);
-        graphics.drawString("You are "+countOfUsers+"th visitor",100,100);
+        drawMessage("You are "+countOfUsers+"th visitor",response);
 
-        ImageIO.write(image,"jpeg",response.getOutputStream());
     }
 
     protected void doPost(HttpServletRequest request,
@@ -85,6 +78,18 @@ public class Task12 extends HttpServlet {
             }
         }
 
+    }
+
+    public static void drawMessage(String message, HttpServletResponse response) throws IOException {
+        response.setContentType("image/jpeg");
+
+        BufferedImage image = new  BufferedImage(800,200,BufferedImage.TYPE_INT_RGB);
+        Graphics2D graphics = image.createGraphics();
+        graphics.setFont(new Font("Monospaced",Font.ITALIC,48));
+        graphics.setColor(Color.YELLOW);
+        graphics.drawString(message,100,100);
+
+        ImageIO.write(image,"jpeg",response.getOutputStream());
     }
 
 }
