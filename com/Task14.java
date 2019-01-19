@@ -1,9 +1,8 @@
 package com;
 
-import DataBase.DAOListExpensesImpl;
-import DataBase.ListExpensesException;
+import database.DAOListExpensesImpl;
+import database.ListExpensesException;
 
-import javax.servlet.ServletConfig;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;

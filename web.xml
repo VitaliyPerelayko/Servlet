@@ -47,5 +47,26 @@ http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
         <servlet-name>Task13</servlet-name>
         <url-pattern>/Task13</url-pattern>
     </servlet-mapping>
+
+    <servlet>
+        <servlet-name>Task14</servlet-name>
+        <servlet-class>com.Task14</servlet-class>
+        <init-param>
+            <param-name>URL</param-name>
+            <param-value>jdbc:mysql://localhost:3306/ListExpenses</param-value>
+        </init-param>
+        <init-param>
+            <param-name>name</param-name>
+            <param-value>ViTT</param-value>
+        </init-param>
+        <init-param>
+            <param-name>password</param-name>
+            <param-value>password</param-value>
+        </init-param>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Task14</servlet-name>
+        <url-pattern>/Task14</url-pattern>
+    </servlet-mapping>
     
 </web-app>

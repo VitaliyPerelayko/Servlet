@@ -1,4 +1,4 @@
-package DataBase;
+package database;
 
 public class Receiver {
     private int num;

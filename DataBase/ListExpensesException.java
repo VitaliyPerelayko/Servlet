@@ -1,4 +1,4 @@
-package DataBase;
+package database;
 
 public class ListExpensesException extends Exception {
     public ListExpensesException(){
