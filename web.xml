@@ -68,5 +68,14 @@ http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
         <servlet-name>Task14</servlet-name>
         <url-pattern>/Task14</url-pattern>
     </servlet-mapping>
+
+    <servlet>
+        <servlet-name>Task15</servlet-name>
+        <servlet-class>task15.Task15</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Task15</servlet-name>
+        <url-pattern>/Task15</url-pattern>
+    </servlet-mapping>
     
 </web-app>
