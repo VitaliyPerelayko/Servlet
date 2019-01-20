@@ -1,5 +1,10 @@
-<%@ page import="java.util.ArrayList" %>
-<html><head><title>task15</title></head>
+<%@ page contentType="text/html;charset=UTF-8" %>
+<html>
+<head>
+    <title>task15</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+</head>
+<%--Подключаем JSTL--%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <body>
     <h1>Table of expenses</h1>
@@ -21,5 +26,11 @@
             </tr>
         </c:forEach>
     </table>
+    <div class="w3-container w3-center">
+        <div class="w3-bar w3-padding-large w3-padding-24">    <!-- buttons holder -->
+            <button onclick="location.href='/a-1.0/AddExpenses'">Add Expenses</button>
+            <button onclick="location.href='/a-1.0/DeleteExpenses'">Delete Expenses</button>
+        </div>
+    </div>
 </body>
 </html>

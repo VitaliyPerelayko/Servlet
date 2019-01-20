@@ -69,6 +69,62 @@ http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
         <url-pattern>/Task14</url-pattern>
     </servlet-mapping>
 
+    <!--
+    Задания 16
+
+    17
+
+    -->
+    <security-role>
+        <role-name>admin</role-name>
+    </security-role>
+
+    <security-role>
+        <role-name>user</role-name>
+    </security-role>
+
+    <login-config>
+        <auth-method>FORM</auth-method>
+        <realm-name>Auth</realm-name>
+        <form-login-config>
+            <form-login-page>/login.jsp</form-login-page>
+            <form-error-page>/error.jsp</form-error-page>
+        </form-login-config>
+    </login-config>
+
+
+
+    <security-constraint>
+        <web-resource-collection>
+            <web-resource-name>Task15</web-resource-name>
+            <url-pattern>/Task15</url-pattern>
+        </web-resource-collection>
+        <auth-constraint>
+            <role-name>admin</role-name>
+            <role-name>user</role-name>
+        </auth-constraint>
+    </security-constraint>
+
+    <security-constraint>
+        <web-resource-collection>
+            <web-resource-name>AddExpenses</web-resource-name>
+            <url-pattern>/AddExpenses</url-pattern>
+        </web-resource-collection>
+        <auth-constraint>
+            <role-name>admin</role-name>
+        </auth-constraint>
+    </security-constraint>
+
+    <security-constraint>
+        <web-resource-collection>
+            <web-resource-name>DeleteExpenses</web-resource-name>
+            <url-pattern>/DeleteExpenses</url-pattern>
+        </web-resource-collection>
+        <auth-constraint>
+            <role-name>admin</role-name>
+        </auth-constraint>
+    </security-constraint>
+
     <servlet>
         <servlet-name>Task15</servlet-name>
         <servlet-class>task15.Task15</servlet-class>
@@ -76,6 +132,24 @@ http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
     <servlet-mapping>
         <servlet-name>Task15</servlet-name>
         <url-pattern>/Task15</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>AddExpenses</servlet-name>
+        <servlet-class>task16.AddExpenses</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AddExpenses</servlet-name>
+        <url-pattern>/AddExpenses</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>DeleteExpenses</servlet-name>
+        <servlet-class>task16.DeleteExpenses</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>DeleteExpenses</servlet-name>
+        <url-pattern>/DeleteExpenses</url-pattern>
     </servlet-mapping>
     
 </web-app>
